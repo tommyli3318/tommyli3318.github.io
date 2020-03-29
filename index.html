@@ -223,6 +223,13 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script>
+				// Open all non-domain links in a new page
+				var a_tags = document.body.getElementsByTagName("a");
+				for (var i = 0; i < a_tags.length; ++i) {
+					if (!a_tags[i].href.includes(document.domain))
+						a_tags[i].setAttribute("target","_blank");
+				}
+			</script>
 	</body>
 </html>
